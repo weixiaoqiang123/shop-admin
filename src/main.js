@@ -6,6 +6,8 @@ import store from './store'
 // 引入element
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+// 全局路由守卫
+import './router/permission.js'
 
 Vue.use(ElementUI)
 
