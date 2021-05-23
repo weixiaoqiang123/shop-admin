@@ -1,0 +1,23 @@
+/* 引入阿里巴巴图标库 */
+@import "//at.alicdn.com/t/font_2070191_l62x3d93z7n.css";
+
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::before,
+.clearfix::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+a{
+    color:white;
+}
+
+a:hover{
+    color: blue;
+}
