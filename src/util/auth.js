@@ -1,4 +1,4 @@
-const token = 'me'
+const token = 'user'
 
 export function getToken(){
   return JSON.parse(localStorage.getItem(token));
