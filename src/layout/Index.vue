@@ -95,7 +95,6 @@ export default {
     overflow: '-moz-scrollbars-none';
     scrollbar-width: none;  /*  火狐   */
     background: #F5F7F9;
-    background-image: linear-gradient(#1AB8B8, #3BB54A);
 }
 .main-container-views::-webkit-scrollbar {
     display: none;  /*  Chrome  */
