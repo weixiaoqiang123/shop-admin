@@ -23,7 +23,7 @@ const actions = {
       setTimeout(() => {
         const index = state.token.role
         const role = arr[index]
-        console.log(role);
+        // console.log(role);
         commit('SET_ROLE',role)
         resolve({role})
       }, 1000)
