@@ -7,6 +7,8 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@better-scroll/mouse-wheel": "^2.3.1",
+    "@better-scroll/scroll-bar": "^2.3.1",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.1",
