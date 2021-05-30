@@ -53,19 +53,18 @@ export default {
       }
       try{
         let res = await login(data)
-        console.log(res);
+        // console.log(res);
         if(res.success){
           // 保存用户信息
           this.$store.commit('user/SET_TOKEN', res.data);
-          // console.log(this.$store.state.user.token);
           setToken(res.data)
           // 重定向到首页
-          this.$router.push('/home')
+          this.$router.push('/index')
         }else{
           this.$message.error('账号或密码错误')
         }
       }catch(e){
-        console.log(e);
+        // console.log(e);
         this.$message.error('系统错误')
       }
     }
