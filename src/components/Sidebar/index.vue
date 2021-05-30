@@ -41,7 +41,7 @@ export default {
     activeMenu() {
       const route = this.$route;
       const { meta, path } = route;
-      console.log(route);
+      // console.log(route);
       // 默认激活项
       if (meta.activeMenu) {
         return meta.activeMenu;
@@ -92,7 +92,7 @@ export default {
   width: 0 !important ; /*  Chrome  */
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 200px;
-    min-height: 400px;
-  }
+  width: 200px;
+  min-height: 400px;
+}
 </style>
