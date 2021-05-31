@@ -10,8 +10,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'assets/css/style.css'
 // 全局路由守卫
 import './router/permission.js'
+import Base from './base.js'
+import '@/icons'
 
 Vue.use(ElementUI)
+Vue.use(Base)
 
 Vue.config.productionTip = false
 
