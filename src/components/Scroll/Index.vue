@@ -33,6 +33,7 @@ export default {
   methods: {
     init(){
       this.scroll = new BScroll('.wrapper', {
+        scrollX: true,
         scrollY: true,
         mouseWheel: true,
         scrollbar: {
