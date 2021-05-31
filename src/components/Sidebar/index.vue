@@ -80,7 +80,7 @@ export default {
 }
 .sidebar-box {
   width: 100%;
-  height: calc(100% - 64px);
+  height: calc(100% - 50px);
   overflow-x: hidden;
   overflow-y: auto;
   -ms-overflow-style: none;
@@ -96,12 +96,26 @@ export default {
   min-height: 400px;
 }
 
+/deep/.el-menu--collapse{
+  width: 50px;
+}
+
 .el-menu--collapse /deep/.el-submenu__icon-arrow{
   display: none;
 }
 
+/deep/.el-menu-item:not(.submenu-title-noDropdown),
+/deep/.el-submenu__title,
+/deep/.el-tooltip{
+  padding-left: 15px !important;
+}
+
+/deep/.submenu-title-noDropdown{
+  padding-left: 25px !important;
+}
+
 /deep/.el-submenu__title>span,
 /deep/.el-menu-item>span{
-  margin-left: 27px;
+  margin-left: 20px;
 }
 </style>

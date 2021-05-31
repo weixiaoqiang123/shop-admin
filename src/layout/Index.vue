@@ -1,7 +1,7 @@
 <template>
     <div class="app-wrapper">
         <el-container class="app-box">
-            <el-aside :width="asideShow ? '64px' : '200px'" class="main-aside">
+            <el-aside :width="asideShow ? '50px' : '200px'" class="main-aside">
                 <sidebar :collapse="asideShow"></sidebar>
             </el-aside>
             <el-container class="main">

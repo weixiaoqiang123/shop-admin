@@ -33,10 +33,6 @@ export default {
 </script>
 
 <style scoped>
-svg{
-  margin-left: 5px;
-}
-
 .svg-icon {
   width: 1.2em;
   height: 1.2em;
