@@ -111,7 +111,7 @@ export default {
 }
 
 /deep/.submenu-title-noDropdown{
-  padding-left: 25px !important;
+  padding-left: 30px !important;
 }
 
 /deep/.el-submenu__title>span,
