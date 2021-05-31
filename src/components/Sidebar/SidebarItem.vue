@@ -90,18 +90,4 @@ export default {
 .el-menu-item.is-active {
     background: #1A86EE !important;
 }
-
-.el-submenu__title>span{
-    margin-left: 15px;
-}
-
-.el-menu-item:not(.submenu-title-noDropdown)>span{
-    margin-left: 27px;
-}
-
-.el-tooltip>.iconfont,
-.el-menu-item>.iconfont{
-    position: relative;
-    right: -4px;
-}
 </style>

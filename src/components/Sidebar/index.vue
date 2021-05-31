@@ -95,4 +95,13 @@ export default {
   width: 200px;
   min-height: 400px;
 }
+
+.el-menu--collapse /deep/.el-submenu__icon-arrow{
+  display: none;
+}
+
+/deep/.el-submenu__title>span,
+/deep/.el-menu-item>span{
+  margin-left: 27px;
+}
 </style>

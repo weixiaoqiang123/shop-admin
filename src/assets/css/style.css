@@ -1,5 +1,5 @@
 /* 引入阿里巴巴图标库 */
-@import "//at.alicdn.com/t/font_2070191_l62x3d93z7n.css";
+@import "//at.alicdn.com/t/font_2070191_1b644d30g6w.css";
 
 body{
     font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
@@ -21,4 +21,34 @@ a{
 
 a:hover{
     color: blue;
+}
+
+.el-table{
+  width: 98%;
+  margin: 0 auto;
+}
+
+.el-form{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.el-form--inline .el-form-item{
+    display: block;
+}
+
+.el-form-item{
+    margin: 10px 0;
+}
+
+.page{
+    margin-left: 15px;
+    height: 60px;
+}
+
+.page>div{
+    position: relative;
+    top: 20px;
 }

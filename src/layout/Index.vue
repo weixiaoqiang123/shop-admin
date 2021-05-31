@@ -2,7 +2,7 @@
     <div class="app-wrapper">
         <el-container class="app-box">
             <el-aside :width="asideShow ? '64px' : '200px'" class="main-aside">
-                <sidebar class="sidebar-container" :collapse="asideShow"></sidebar>
+                <sidebar :collapse="asideShow"></sidebar>
             </el-aside>
             <el-container class="main">
                 <el-header class="heads" height='50px'>
@@ -74,7 +74,6 @@ export default {
     overflow: hidden!important;
 }
 .main-aside{
-    height: 100%;
     background: #304156;
     transition:  all 0.5s;
 }
@@ -87,19 +86,21 @@ export default {
     border: none !important;
 }
 .main-container-views{
-    width: 100%;
-    height: calc(100% - 35px);
-    overflow-x: hidden;
-    overflow-y: auto;
-    -ms-overflow-style: none; 
-    overflow: '-moz-scrollbars-none';
-    scrollbar-width: none;  /*  火狐   */
-    background: #F5F7F9;
+    width: clac(100% - 15px);
+    height: calc(100% - 45px);
+    background: #f2f2f2;
+    padding-left: 15px;
+    padding-top: 10px;
 }
-.main-container-views::-webkit-scrollbar {
-    display: none;  /*  Chrome  */
-    width: 0 !important ; /*  Chrome  */
-  }
+
+.main-container-views>div{
+    background-color: white;
+}
+  /*  Chrome  */
+/* .main-container-views::-webkit-scrollbar {
+    display: none;
+    width: 0 !important ;
+} */
 
 .scrollTop{
     height: 100%;
