@@ -1,27 +1,29 @@
 <template>
   <div class="container">
-    <el-form ref="queryData" :model="queryData" :rules="userRules" :inline="true" label-suffix=":">
-      <el-form-item label="昵称">
-        <el-input v-model="queryData.nickname" clearable=""></el-input>
-      </el-form-item>
-      <el-form-item label="姓名">
-        <el-input v-model="queryData.name" clearable></el-input>
-      </el-form-item>
-      <el-form-item label="注册方式">
-        <el-select v-model="queryData.method" placeholder="请选择" clearable>
-          <el-option
-            v-for="item in registerList"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value">
-          </el-option>
-        </el-select>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" size="medium" icon="el-icon-search" @click="search">查询</el-button>
-        <el-button type="success" size="medium" @click="reset">重置</el-button>
-      </el-form-item>
-    </el-form>
+    <div class="tool">
+      <el-form ref="queryData" :model="queryData" :rules="userRules" :inline="true" label-suffix=":">
+        <el-form-item label="昵称">
+          <el-input v-model="queryData.nickname" clearable=""></el-input>
+        </el-form-item>
+        <el-form-item label="姓名">
+          <el-input v-model="queryData.name" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="注册方式">
+          <el-select v-model="queryData.method" placeholder="请选择" clearable>
+            <el-option
+              v-for="item in registerList"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value">
+            </el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" size="medium" icon="el-icon-search" @click="search">查询</el-button>
+          <el-button type="success" size="medium" @click="reset">重置</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
     <el-table
       :data="tableData"
       border>
@@ -125,11 +127,11 @@ export default {
           lineSize: this.queryPage.lineSize
         })
         let res = await findAllUser(params)
-        console.log(res);
-        this.tableData  = res.records
-        this.queryPage = new Page(res)
+        // console.log(res);
+        this.tableData  = res.data.records
+        this.queryPage = new Page(res.data)
       }catch(e){
-        console.log(e);
+        this.$message.error('系统错误, 查询失败')
       }
     },
     handleCurrentPageChange (payload) {

@@ -54,10 +54,10 @@ export default {
       try{
         let res = await login(data)
         // console.log(res);
-        if(res.success){
+        if(res.data.success){
           // 保存用户信息
-          this.$store.commit('user/SET_TOKEN', res.data);
-          setToken(res.data)
+          this.$store.commit('user/SET_TOKEN', res.data.data);
+          setToken(res.data.data)
           // 重定向到首页
           this.$router.push('/index')
         }else{
