@@ -40,19 +40,19 @@ a:hover{
   margin: 0 auto;
 }
 
-.el-form{
+.tool>.el-form{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     padding: 0 20px;
 }
 
-.el-form--inline .el-form-item{
+.tool>.el-form--inline .el-form-item{
     display: block;
 }
 
-.el-form-item{
-    margin: 10px 0;
+.tool .el-form-item{
+    margin: 10px 20px 10px 0;
 }
 
 .page{
