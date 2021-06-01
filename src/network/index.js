@@ -23,8 +23,7 @@ class AjaxRequest {
       })
   
       instance.interceptors.response.use(res => {
-        // console.log(res.data);
-        return res.data
+        return res
       }, err => {
         console.log(err)
       })
