@@ -1,7 +1,7 @@
 <template>
   <div class="headers">
     <div class="headers-left">
-      <div class="headers-left-box" :class="asideShow === false ? 'headers-left-active' : ''" @click="targetIcon">
+      <div class="headers-left-box" :class="isCollapse ? '' : 'headers-left-active'" @click="targetIcon">
         <i class="el-icon-s-fold "></i>
       </div>
       <Breadcrumb />
@@ -31,9 +31,9 @@ import Breadcrumb from '../Breadcrumb/Breadcrumb'
 
 export default {
   props:{
-    asideShow: {
+    isCollapse: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   computed: {
@@ -51,7 +51,7 @@ export default {
   },
   methods:{
     targetIcon(){
-      this.$emit('targetIcon',!this.asideShow)
+      this.$emit('targetIcon')
     },
     // 用户名 下拉菜单
     async handleCommand(command){

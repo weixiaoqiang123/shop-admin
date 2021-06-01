@@ -1,12 +1,12 @@
 <template>
     <div class="app-wrapper">
         <el-container class="app-box">
-            <el-aside :width="asideShow ? '50px' : '200px'" class="main-aside">
-                <sidebar :collapse="asideShow"></sidebar>
+            <el-aside :width="isCollapse ? '50px' : '200px'" class="main-aside">
+                <sidebar :collapse="isCollapse"></sidebar>
             </el-aside>
             <el-container class="main">
                 <el-header class="heads" height='50px'>
-                    <Headers :asideShow.sync="asideShow" @targetIcon='targetIcon'></Headers>
+                    <Headers :asideShow.sync="isCollapse" @targetIcon='targetIcon'></Headers>
                 </el-header>
                 <el-main class="main-container">
                     <TagsViews />
@@ -35,7 +35,7 @@ import TagsViews from '../components/TagView/TagsView.vue'
 export default {
     data(){
         return {
-            asideShow: true
+            isCollapse: false
         }
     },
     components: {
@@ -44,8 +44,8 @@ export default {
         TagsViews
     },
     methods:{
-        targetIcon(boole){
-            this.asideShow = boole
+        targetIcon(){
+            this.isCollapse = !this.isCollapse
         }
     }
 }
